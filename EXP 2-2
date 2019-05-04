@@ -1,0 +1,35 @@
+// compute's the customers water bill//
+// P35 water demand charge plus consumption charge of P1.10 for every gallon used//
+//consumption is figured from meter readings in gallons taken recently and during the previous month// 
+// if customers balance  is greater than 0 a P20 late charge is assessed as well//
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	
+	double gallon,bill,billbal,bal;
+	
+	cout << " How many gallons did you consume from last month until today? =  "; 
+	cin >> gallon; 
+	cout << "\n";
+	
+	cout << " How much is your unpaid balance? =  ";
+	cin >> bal; 
+	cout <<"\n";
+	
+	bill = ( 35 + (gallon * 1.10));
+	
+	billbal = ( 35 + bal + 20 + ( gallon * 1.10));
+	
+		
+	if (bal > 0)
+		cout << " Your water bill is " << billbal;  
+	else
+		cout << " Your water bill is " << bill;
+	
+	
+	
+	return 0;
+}
