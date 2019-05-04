@@ -1,0 +1,66 @@
+//Package A= 995/month 10 hrs of access provided. Additional 20/hour//
+//Package B= 1495/month 20 hrs of access provided. Additional 10/hour//
+//Package C= 1995/month of unlimited access//
+// program that will calculate customer's monthly bill. Input whar package and how many hours used. Should display total amount due// 
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	char package; 
+	int hours;
+	double billa,billb;
+	
+	
+	cout<< " The following are the packages\n";
+	
+	cout<< " Package A = 995 pesos/month \n Package B= 1495 pesos/month \n Package C= 1995 pesos/month\n";
+	
+	cout<< "To compute for the monthly bill type the letter of the package availed and number of hours used\n";
+	
+	cout << "\n";
+	cout << "\n";
+	
+	cout << " Package = ";
+	cin>> package; 
+	
+	cout << " No. of Hours used = ";
+	cin>> hours; 
+	cout <<"\n";
+	
+	billa = ( 995 +  (hours - 10) * 20 );
+	billb = ( 1495 + (hours -20) * 10);
+		
+	
+	switch(package)
+	{
+		case 'A':
+			{
+			if ( hours > 10)
+			cout <<"The monthly bill is" << billa << "Pesos";
+			else
+			cout <<" The monthly bill is 995";
+		break;
+	}
+		
+		case 'B':
+			{
+				if ( hours > 20 )
+				cout<< " The monthly bill is " << billb << "Pesos"; 
+				else
+				cout << " The monthly bill is 1495 Pesos";
+			break;
+			}
+		case 'C':
+			{	
+			cout<< " The bill is 1995 Pesos";
+			break;
+			}
+			
+		default:
+			cout << " ERROR! THE PACKAGE SHOULD ONLY BE CHOSEN FROM A, B AND C.";
+	}
+
+	return 0;
+}
