@@ -1,0 +1,25 @@
+//Enter  a number // 
+//multiplication table of //
+
+#include<iostream>
+#include<stdlib.h>
+
+using namespace std;
+
+int main()
+{
+	
+	int n;
+	
+	cout << " Enter a number: "; cin >> n;
+	cout << " Mutiplication table of: " << n << "\n";
+	
+	for ( int i = 1; i <= 10; i++)
+	{
+		cout << i << " * " << n << " = " << i * n << "\n"; 
+	}
+	
+
+return 0;
+	
+}
